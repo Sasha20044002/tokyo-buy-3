@@ -567,6 +567,9 @@ body {
     list-style-type: none;
   }
   .main .list-mob a {
+    margin: 0 0 15px 0;
+  }
+  .main .list-mob a:nth-child(odd) {
     margin: 0 10px 15px 0;
   }
   .main .list-mob-item {

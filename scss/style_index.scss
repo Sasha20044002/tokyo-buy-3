@@ -297,6 +297,10 @@ body {
             list-style-type: none;
 
             a{
+                margin: 0 0 15px 0;
+            }
+
+            a:nth-child(odd){
                 margin: 0 10px 15px 0;
             }
 
