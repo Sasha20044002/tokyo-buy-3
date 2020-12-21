@@ -568,6 +568,9 @@ body {
   .main .nav {
     display: none;
   }
+  .main .menu {
+    margin: 0 0 40px 0;
+  }
   .main .menu .category {
     display: none;
   }
