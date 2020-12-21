@@ -38,6 +38,7 @@
         }
 
         .contacts{
+            width: 150px;
             margin: 0 163px 0 0;
             &-tel{
                 @include txt($c1, 22px, 16px, H400);
