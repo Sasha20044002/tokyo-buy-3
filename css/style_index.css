@@ -514,6 +514,18 @@ body {
   }
 }
 
+@media (max-width: 667px) {
+  .main .list-mob a {
+    margin: 0 10px 15px 0;
+  }
+  .main .list-mob a:nth-child(3n) {
+    margin-right: 0;
+  }
+  .main .list-mob a:nth-child(4n) {
+    margin-right: 10px;
+  }
+}
+
 @media (max-width: 426px) {
   body {
     width: 100%;

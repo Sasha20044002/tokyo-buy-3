@@ -155,7 +155,9 @@ body {
     }
 
     .main{
+        margin-bottom: 20px;
         .nav{
+            display: none;
             &-list{
                 width: 90%;
                 margin: 0 auto;
@@ -205,17 +207,51 @@ body {
             margin: 0 auto;
 
             .category{
+                width: 100%;
                 margin: 0 auto;
+                flex-wrap: wrap;
+                justify-content: flex-start;
                 &-block{
                     width: 212px;
-                    padding-right: 0;
+                    padding-right: 1px;
                     margin-right: 14px;
-
+                    
+                    &:nth-child(3n+1){
+                        margin-right: 0;
+                    }
                     &-img{
-                        margin-left: 20px;
+                        margin-left: 0px;
                     }
 
-                    &:nth-child(3n+1){
+                    &:hover{
+                        padding-right: 0;
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 667px){
+    .main{
+        .nav{
+            &-list{
+                flex-wrap: wrap;
+            }
+        }
+
+        .menu{
+            .category{
+                width: 85%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+
+                &-block{
+                    margin: 0 20px 30px 0;
+
+                    &:nth-child(odd){
                         margin-right: 0;
                     }
                 }
