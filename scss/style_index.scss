@@ -558,12 +558,19 @@ body {
     .main{
         .list-mob{
             a:nth-child(odd), a{
-                margin: 0 0 15px 0;
-            }
-
-            a:nth-child(odd){
                 margin: 0 4px 15px 0;
             }
+
+            a:nth-child(1),
+            a:nth-child(5),
+            a:nth-child(6),
+            a:nth-child(2){
+                margin-right: 7px;
+            }
+
+            // a:nth-child(odd){
+            //     margin: 0 4px 15px 0;
+            // }
         }
     }
 }
