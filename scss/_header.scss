@@ -24,7 +24,7 @@
     }
 
     .nav{
-        margin: 0 106px 0 0;
+        margin: 0 7.36% 0 0;
         display: flex;
         align-items: center;
         transition: all .3s;
@@ -38,8 +38,8 @@
         }
 
         .contacts{
-            width: 150px;
-            margin: 0 163px 0 0;
+            width: 200px;
+            margin: 0 11.32% 0 0;
             &-tel{
                 @include txt($c1, 22px, 16px, H400);
                 display: block;
@@ -65,7 +65,7 @@
             display: flex;
 
             &-item{
-                margin: 0 90px 0 0;
+                margin: 0 6.25% 0 0;
                 &-link{
                     @include txt($c1, 22px, 16px, H400);
                     text-decoration: none;
