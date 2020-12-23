@@ -201,12 +201,53 @@ body {
     body {
         width: 1204px;
     }
+
+    .header{
+        .nav{
+            justify-content: space-evenly;
+        }
+    }
 }
 
+//1440
+@media (max-width: 1440px){
+    .header{
+        .nav{
+            display: flex;
+            justify-content: space-around;
+
+            &-list{
+                &-item{
+                    margin-right: 30%;
+                }
+            }
+        }
+    }
+}
 // Tablet
 @media (max-width: 1024px) {
     body {
         width: 90%;
+    }
+
+    .header{
+        
+        .nav{
+            margin-right: 170px;
+            .contacts{
+                margin-right: 13%;
+            }
+
+            &-list{
+                &-item{
+                    margin-right: 15%;
+                }
+            }
+        }
+
+        .basket{
+            margin-left: -7px;
+        }
     }
 
     .main {

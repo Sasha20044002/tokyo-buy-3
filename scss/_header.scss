@@ -24,6 +24,7 @@
     }
 
     .nav {
+        width: 100%;
         margin: 0 7.36% 0 0;
         display: flex;
         align-items: center;
@@ -62,14 +63,17 @@
         }
 
         &-list {
+            width: 30%;
             list-style-type: none;
             display: flex;
+            justify-content: space-between;
 
             &-item {
-                margin: 0 6.25% 0 0;
+                // margin: 0 0 0 6.25%;
 
                 &-link {
                     @include txt($c1, 22px, 16px, H400);
+                    display: block;
                     text-decoration: none;
 
                     &:hover {
@@ -81,9 +85,9 @@
                     }
                 }
 
-                &:last-child {
-                    margin: 0;
-                }
+                // &:first-child {
+                //     margin: 0;
+                // }
             }
         }
     }
