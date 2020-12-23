@@ -1,109 +1,111 @@
 @import '_need.scss';
 
-.header{
+.header {
     width: 100%;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    .logo-a{
+    .logo-a {
         text-decoration: none;
     }
 
-    .logo{
+    .logo {
         margin: 0 2.16% 0 0;
     }
 
-    #burger-menu{
+    #burger-menu {
         display: none;
     }
 
-    .open{
+    .open {
         display: none;
     }
 
-    .nav{
+    .nav {
         margin: 0 7.36% 0 0;
         display: flex;
         align-items: center;
         transition: all .3s;
 
-        &-logo{
+        &-logo {
             display: none;
         }
 
-        .close{
+        .close {
             display: none;
         }
 
-        .contacts{
+        .contacts {
             width: 200px;
             margin: 0 11.32% 0 0;
-            &-tel{
+
+            &-tel {
                 @include txt($c1, 22px, 16px, H400);
                 display: block;
                 margin: 0 0 3px 0;
                 text-decoration: none;
 
-                &:hover{
+                &:hover {
                     text-decoration: underline;
                 }
 
-                &:active{
+                &:active {
                     text-decoration: none;
                 }
             }
 
-            &-red{
+            &-red {
                 @include txt($c2, 19px, 14px, H300);
             }
         }
 
-        &-list{
+        &-list {
             list-style-type: none;
             display: flex;
 
-            &-item{
+            &-item {
                 margin: 0 6.25% 0 0;
-                &-link{
+
+                &-link {
                     @include txt($c1, 22px, 16px, H400);
                     text-decoration: none;
 
-                    &:hover{
+                    &:hover {
                         text-decoration: underline;
                     }
-    
-                    &:active{
+
+                    &:active {
                         text-decoration: none;
                     }
                 }
 
-                &:last-child{
+                &:last-child {
                     margin: 0;
                 }
             }
         }
     }
 
-    .basket{
+    .basket {
         display: flex;
         align-items: center;
 
-        &-content{
+        &-content {
             margin: 0 20px 0 0;
 
-            &-price{
+            &-price {
                 @include txt($c1, 22px, 16px, H400);
                 display: block;
             }
 
-            &-quantity{
+            &-quantity {
                 @include txt($c2, 19px, 14px, H400);
             }
         }
 
-        &-btn{
+        &-btn {
             @include txt($c4, 22px, 16px, H400);
             background-color: $c2;
             border: none;
@@ -113,22 +115,23 @@
             display: flex;
             align-items: center;
 
-            &:focus, &:active{
+            &:focus,
+            &:active {
                 outline: none;
             }
 
-            &:hover{
+            &:hover {
                 cursor: pointer;
             }
 
-            &::before{
+            &::before {
                 content: url(../img/bin.svg);
                 margin: 0 8px 0 0;
             }
         }
     }
 
-    .basket-mob{
+    .basket-mob {
         display: none;
     }
 }

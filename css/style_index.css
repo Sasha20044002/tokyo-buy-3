@@ -336,6 +336,64 @@ body {
   display: none;
 }
 
+.main .photo {
+  position: relative;
+}
+
+.main .photo-radio {
+  margin-left: -42.5px;
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main .photo-radio-input {
+  display: none;
+}
+
+.main .photo-radio #img1:checked ~ label[for="img1"] {
+  background-color: #FF2727;
+}
+
+.main .photo-radio #img2:checked ~ label[for="img2"] {
+  background-color: #FF2727;
+}
+
+.main .photo-radio #img3:checked ~ label[for="img3"] {
+  background-color: #FF2727;
+}
+
+.main .photo-radio-rad {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #fff;
+  margin: 0 20px 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main .photo-radio-rad::before {
+  content: "";
+  border: 1px solid #000;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.main .photo-radio-rad:last-child {
+  margin: 0;
+}
+
 .main .photo-desk {
   display: block;
   width: 100%;
@@ -404,12 +462,21 @@ body {
   display: none;
 }
 
+@media (max-width: 2560px) {
+  body {
+    width: 1204px;
+  }
+}
+
 @media (max-width: 1024px) {
   body {
     width: 90%;
   }
   .main {
     margin-bottom: 20px;
+  }
+  .main .photo-radio {
+    top: 359px;
   }
 }
 
@@ -495,6 +562,9 @@ body {
   }
   .main .photo {
     width: 100%;
+  }
+  .main .photo-radio {
+    display: none;
   }
   .main .photo .photo-desk {
     display: none;
@@ -811,7 +881,8 @@ body {
 }
 
 @media (max-width: 361px) {
-  .main .list-mob a:nth-child(odd), .main .list-mob a {
+  .main .list-mob a:nth-child(odd),
+  .main .list-mob a {
     margin: 0 4px 15px 0;
   }
   .main .list-mob a:nth-child(1),
@@ -826,7 +897,8 @@ body {
   .header #burger-menu:checked ~ .nav .contacts {
     left: 15%;
   }
-  .main .list-mod a, .main .list-mod a:nth-child(odd) {
+  .main .list-mod a,
+  .main .list-mod a:nth-child(odd) {
     margin: 0;
   }
 }

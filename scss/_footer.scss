@@ -7,20 +7,20 @@
     justify-content: space-between;
     align-items: center;
 
-    .logo{
+    .logo {
         margin: 0 0 0 67px;
     }
 
-    .text{
+    .text {
         width: 43%;
         @include txt($c1, 19px, 14px, H300);
     }
 
-    .social{
+    .social {
         display: flex;
         align-items: center;
 
-        .ico-inst{
+        .ico-inst {
             margin: 0 0 0 18px;
         }
     }
