@@ -564,11 +564,11 @@ body {
     }
 }
 
-@media (max-width: 525px){
-    .main{
-        .menu{
-            .block-mob{
-                &-descr{
+@media (max-width: 525px) {
+    .main {
+        .menu {
+            .block-mob {
+                &-descr {
                     width: 40%;
                 }
             }
