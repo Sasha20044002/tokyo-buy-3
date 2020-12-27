@@ -178,7 +178,7 @@ body {
         }
     }
 
-    .photo-desk {
+    .photo-desk{
         display: block;
         width: 100%;
         height: auto;
@@ -204,7 +204,7 @@ body {
 
     .header{
         .nav{
-            justify-content: space-evenly;
+            justify-content: space-around;
         }
     }
 }
@@ -231,32 +231,72 @@ body {
     }
 
     .header{
-        
         .nav{
-            margin-right: 170px;
+            justify-content: center;
+
             .contacts{
-                margin-right: 13%;
+                display: none;
             }
 
             &-list{
+                margin-left: 0;
+                width: 307px;
                 &-item{
-                    margin-right: 15%;
+                    margin: 0;
                 }
             }
-        }
-
-        .basket{
-            margin-left: -7px;
         }
     }
 
     .main {
         margin-bottom: 20px;
 
-        .photo {
-            &-radio {
-                top: 359px;
+        .list{
+            display: none;
+        }
+
+        .list-mob {
+            display: block;
+            margin: 0 auto;
+            padding: 0 0 40px 0;
+            width: 95%;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-around;
+            list-style-type: none;
+
+            a {
+                margin: 0 0 15px 0;
             }
+
+            &-item {
+                width: 175px;
+                min-height: 119px;
+                background-image: url(../img/rolls_3.png);
+                background-repeat: no-repeat;
+                position: relative;
+
+                &:nth-child(4n) {
+                    margin: 0 0 15px 0;
+                }
+
+                &-link {
+                    @include txt(#fff, 24px, 20px, M500);
+                    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+                    text-decoration: none;
+                    letter-spacing: 0.05em;
+                    position: absolute;
+                    bottom: 14px;
+                    left: 0;
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+        }
+
+        .photo {
+            display: none;
         }
     }
 }
@@ -370,17 +410,10 @@ body {
     }
 }
 
-@media (max-width: 667px) {
-    .main {
-        .list-mob {
-            a {
-                margin: 0 10px 15px 0;
-            }
-
-            a:nth-child(3n) {
-                margin-right: 0;
-            }
-
+@media (max-width: 733px){
+    .main{
+        .list-mob{
+            a:nth-child(3n),
             a:nth-child(4n) {
                 margin-right: 10px;
             }
@@ -388,14 +421,12 @@ body {
     }
 }
 
-//Telephone
-@media (max-width: 426px) {
-
-    body {
+@media (max-width: 685px){
+    body{
         width: 100%;
     }
 
-    * {
+    *{
         padding: 0;
         margin: 0;
     }
@@ -651,6 +682,305 @@ body {
     }
 }
 
+@media (max-width: 667px) {
+    .main {
+        .list-mob {
+            a {
+                margin: 0 10px 15px 0;
+            }
+
+            a:nth-child(3n) {
+                margin-right: 0;
+            }
+
+            a:nth-child(4n) {
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+@media (max-width: 547px){
+    .main {
+        .list-mob {
+            a {
+                margin: 0 10px 15px 0;
+            }
+
+            a:nth-child(2n) {
+                margin-right: 10;
+            }
+
+            a:nth-child(3n) {
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+//Telephone
+@media (max-width: 426px) {
+
+    body {
+        width: 100%;
+    }
+
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    .header {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+
+        .logo {
+            margin: 0;
+        }
+
+        .open {
+            display: block;
+            order: -1;
+        }
+
+        #burger-menu:checked~.nav {
+            position: relative;
+            position: fixed;
+            left: 0;
+            top: 0;
+            z-index: 10;
+            background-color: #fff;
+            width: 100vw;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            .nav-logo {
+                display: block;
+                position: absolute;
+                top: 0px;
+                left: 20px;
+            }
+
+            .close {
+                display: block;
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                @include txt($c1, 24px, 21px, H400);
+            }
+
+            .contacts {
+                width: 100%;
+                position: absolute;
+                top: 100px;
+                left: 25%;
+
+                &-tel {
+                    font-size: 24px;
+                }
+
+                &-red {
+                    font-size: 21px;
+                }
+            }
+
+            .nav-list {
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                &-item {
+                    margin: 0 0 30px 0;
+
+                    &:last-child {
+                        margin: 0;
+                    }
+
+                    &-link {
+                        font-size: 36px;
+                    }
+                }
+            }
+        }
+
+        .nav {
+            position: absolute;
+            left: -99999%;
+            top: 0;
+        }
+
+
+        .basket {
+            display: none;
+        }
+
+        .basket-mob {
+            display: block;
+            order: 3;
+        }
+
+        .basket-mob {
+            display: block;
+            border: none;
+            background-color: $c6;
+            border-radius: 51.5px;
+            padding: 8px 10px;
+            margin: 0 0 0 -20px;
+            position: relative;
+
+            &-number {
+                background: #FFFFFF;
+                border: 1px solid #FF2727;
+                box-sizing: border-box;
+                border-radius: 51.5px;
+                padding: 0px 7px 2px;
+                position: absolute;
+                bottom: 23px;
+                left: 26px;
+
+                output {
+                    @include txt($c1, 14px, 10px, H300);
+                }
+            }
+
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+
+    .main {
+        width: 100%;
+        flex-direction: column-reverse;
+        align-items: center;
+
+        .list {
+            display: none;
+        }
+
+        .list-mob {
+            display: block;
+            margin: 0 auto;
+            padding: 0 0 100px 0;
+            width: 99.5%;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            list-style-type: none;
+
+            a {
+                margin: 0 10px 15px 0;
+            }
+
+            a:nth-child(odd) {
+                margin: 0 10px 15px 0;
+            }
+
+            &-item {
+                width: 175px;
+                min-height: 119px;
+                background-image: url(../img/rolls_3.png);
+                background-repeat: no-repeat;
+                position: relative;
+
+                &:nth-child(4n) {
+                    margin: 0 0 15px 0;
+                }
+
+                &-link {
+                    @include txt(#fff, 24px, 20px, M500);
+                    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+                    text-decoration: none;
+                    letter-spacing: 0.05em;
+                    position: absolute;
+                    bottom: 14px;
+                    left: 0;
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+        }
+
+        .photo {
+            width: 100%;
+
+            .photo-desk {
+                display: none;
+            }
+
+            .photo-mobile {
+                display: block;
+                width: 100%;
+                height: auto;
+                margin: 0 0 20px 0;
+            }
+        }
+    }
+
+
+    .footer {
+        display: none;
+    }
+
+    .footer-mob {
+        display: block;
+        position: relative;
+        width: 100%;
+        min-height: 38px;
+        background-color: #f7f7f7;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 9px 0 5px 0;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+
+        &-basket {
+            display: block;
+            border: none;
+            background-color: $c6;
+            border-radius: 51.5px;
+            // box-sizing: border-box;
+            padding: 13px 15px;
+            position: relative;
+            position: absolute;
+            top: -23.5px;
+
+            &-number {
+                background: #FFFFFF;
+                border: 1px solid #FF2727;
+                box-sizing: border-box;
+                border-radius: 51.5px;
+                padding: 2px 9px 5px 9px;
+                position: absolute;
+                bottom: 30px;
+                left: 30px;
+
+                output {
+                    @include txt($c1, 14px, 10px, H300);
+                }
+            }
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        &-text {
+            width: 100%;
+            @include txt($c1, 15px, 12px, H400);
+            text-align: center;
+            margin: 30px 0 0 0;
+        }
+    }
+}
+
 @media (max-width: 376px) {
     .main {
         .list-mob {
@@ -671,19 +1001,15 @@ body {
 
             a:nth-child(odd),
             a {
-                margin: 0 4px 15px 0;
+                margin: 0 10px 15px 0;
             }
 
             a:nth-child(1),
             a:nth-child(5),
             a:nth-child(6),
             a:nth-child(2) {
-                margin-right: 7px;
+                margin-right: 10px;
             }
-
-            // a:nth-child(odd){
-            //     margin: 0 4px 15px 0;
-            // }
         }
     }
 }
