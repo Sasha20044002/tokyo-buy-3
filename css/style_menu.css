@@ -331,50 +331,37 @@ body {
           align-items: center;
 }
 
-.main .menu .category-block-buy-btn {
+.main .menu .category-block-buy-2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #fff;
-  line-height: 22px;
-  font-size: 16px;
-  font-family: H400;
-  padding: 3px 16px 8px 15px;
-  background-color: #F11F3E;
-  border: none;
-  border-radius: 54.5px;
 }
 
-.main .menu .category-block-buy-btn:focus, .main .menu .category-block-buy-btn:active {
-  outline: none;
+.main .menu .category-block-buy-2 .minus {
+  color: #000;
+  line-height: 41px;
+  font-size: 32px;
+  font-family: H300;
+  text-decoration: none;
 }
 
-.main .menu .category-block-buy-btn:hover {
-  color: #F11F3E;
-  line-height: 22px;
-  font-size: 16px;
-  font-family: H400;
-  background-color: #fff;
-  padding: 2px 15px 7px 14px;
-  border: 1px solid #F11F3E;
+.main .menu .category-block-buy-2 .plus {
+  color: #000;
+  line-height: 27px;
+  font-size: 20px;
+  font-family: H300;
+  text-decoration: none;
 }
 
-.main .menu .category-block-buy-btn:active {
-  color: #F11F3E;
-  line-height: 22px;
-  font-size: 16px;
-  font-family: H400;
-  background-color: #fff;
-  padding: 2px 15px 7px 14px;
-  border: 1px solid #F11F3E;
-}
-
-.main .menu .category-block-buy-btn::before {
-  content: '+';
-  margin: 0 5px 0 0;
+.main .menu .category-block-buy-2 output {
+  color: #000;
+  line-height: 24px;
+  font-size: 20px;
+  font-family: H300;
+  margin: 0 5px;
 }
 
 .main .menu .category-block-buy-price {
