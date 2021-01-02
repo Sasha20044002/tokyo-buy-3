@@ -104,7 +104,7 @@ body {
                     justify-content: space-between;
                     align-items: center;
 
-                    &-btn{
+                    &-btn {
                         border: none;
                         background-color: $c5;
                         border-radius: 40px;
@@ -114,12 +114,13 @@ body {
                         margin-right: 5px;
                         padding: 6px 6px;
 
-                        &::before{
+                        &::before {
                             content: '+';
                             margin: 0 5px 0 0;
                         }
 
-                        &:focus, &:active{
+                        &:focus,
+                        &:active {
                             outline: none;
                         }
                     }
@@ -132,17 +133,17 @@ body {
                             margin-right: 7px;
                             display: flex;
                             align-items: center;
-    
+
                             .minus {
                                 @include txt($c1, 41px, 32px, H300);
                                 text-decoration: none;
                             }
-    
+
                             .plus {
                                 @include txt($c1, 27px, 20px, H300);
                                 text-decoration: none;
                             }
-    
+
                             output {
                                 @include txt($c1, 24px, 20px, H300);
                                 margin: 0 5px;
@@ -522,6 +523,10 @@ body {
                     }
                 }
             }
+
+            @import '_product-item.scss';
+            
+            @import '_modal.scss';
 
             .padding {
                 padding: 0 20px 20px;
