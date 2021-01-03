@@ -33,6 +33,9 @@
     display: flex;
     background-color: #fefefe;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .modal .modal-content .close {
@@ -44,8 +47,9 @@
 }
 
 .modal .modal-content .left img {
-    width: 90%;
+    width: 100%;
     display: block;
+    transform: scale(2);
 }
 
 .modal .modal-content .right {

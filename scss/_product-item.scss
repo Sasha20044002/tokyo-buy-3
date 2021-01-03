@@ -13,6 +13,10 @@
     justify-content: space-between;
     text-align: center;
     border-bottom: 1px solid #848484;
+
+    &:last-child{
+        border: none;
+    }
 }
 
 .product-item:last-child {
@@ -25,11 +29,11 @@
 }
 
 .product-item .product-body img{
-    margin-right: 15px;
+    margin-right: 35px;
 }
 
 .product-item .product-body .text {
-    width: 60%;
+    width: 100%;
     margin: 0 5% 0 0;
     display: flex;
     flex-direction: column;

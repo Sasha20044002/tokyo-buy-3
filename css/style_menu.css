@@ -408,6 +408,14 @@ body {
   padding: 19px;
 }
 
+.main .menu .product-list {
+  display: none;
+}
+
+.main .menu .modal {
+  display: none;
+}
+
 @font-face {
   font-family: H300;
   src: url(../fonts/HelveticaNeueCyr-Light.woff2);
@@ -581,6 +589,9 @@ body {
   }
   .main .menu .category-block:hover {
     padding-right: 0;
+  }
+  .main .menu .product-list {
+    display: none;
   }
 }
 
@@ -821,6 +832,13 @@ body {
     font-family: H300;
     margin: 0 5px;
   }
+  .main .menu .product-list {
+    display: block;
+    padding: 20px 0 0 0;
+  }
+  .main .menu .modal {
+    display: block;
+  }
   @font-face {
     .main .menu {
       font-family: H300;
@@ -873,6 +891,9 @@ body {
     border-bottom: 1px solid #848484;
   }
   .main .menu .product-item:last-child {
+    border: none;
+  }
+  .main .menu .product-item:last-child {
     margin-right: 0;
   }
   .main .menu .product-item .product-body {
@@ -882,10 +903,10 @@ body {
     display: flex;
   }
   .main .menu .product-item .product-body img {
-    margin-right: 15px;
+    margin-right: 35px;
   }
   .main .menu .product-item .product-body .text {
-    width: 60%;
+    width: 100%;
     margin: 0 5% 0 0;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1101,6 +1122,14 @@ body {
     display: flex;
     background-color: #fefefe;
     position: relative;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .main .menu .modal .modal-content .close {
     position: absolute;
@@ -1110,8 +1139,10 @@ body {
     color: #555;
   }
   .main .menu .modal .modal-content .left img {
-    width: 90%;
+    width: 100%;
     display: block;
+    -webkit-transform: scale(2);
+            transform: scale(2);
   }
   .main .menu .modal .modal-content .right {
     width: 50%;
